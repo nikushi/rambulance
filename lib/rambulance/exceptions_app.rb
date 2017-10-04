@@ -80,14 +80,14 @@ module Rambulance
     end
 
     def error_path(status_in_words = status_in_words())
-      "#{controller_path}/#{status_in_words}"
+      "#{__controller_path}/#{status_in_words}"
     end
 
     def layout_name
       request.format.json? ? false : Rambulance.layout_name
     end
 
-    def controller_path
+    def __controller_path
       Rambulance.view_path
     end
 
